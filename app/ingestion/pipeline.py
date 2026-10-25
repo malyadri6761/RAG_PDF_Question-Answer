@@ -2,7 +2,7 @@ from pathlib import Path
 
 from .chunker import chunk_segments
 from .image_loader import image_to_segments
-from . import make_doc_id
+from .models import make_doc_id
 from .pdf_loader import load_pdf
 
 IMAGE_EXT = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}

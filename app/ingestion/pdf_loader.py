@@ -3,7 +3,7 @@ import logging
 import fitz  # PyMuPDF
 
 from .image_loader import image_to_segments, ocr_image
-from . import Segment
+from .models import Segment
 
 log = logging.getLogger(__name__)
 

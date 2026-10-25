@@ -1,5 +1,5 @@
 import re
-from . import Chunk,Segment,make_chunk_id
+from .models import Chunk,Segment,make_chunk_id
 
 # Preferred cut points, best first
 SEPARATORS = ["\n\n", "\n", ". ", "? ", "! ", "; ", ", ", " "]

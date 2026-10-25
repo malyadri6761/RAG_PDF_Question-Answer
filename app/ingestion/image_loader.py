@@ -5,7 +5,7 @@ import os
 import pytesseract
 from PIL import Image, ImageOps
 
-from . import Segment
+from .models import Segment
 
 log = logging.getLogger(__name__)
 
