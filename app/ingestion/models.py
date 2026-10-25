@@ -25,7 +25,7 @@ class Chunk:
 
     def citation(self)->str:
         """Label shown next to an answer, e.g. 'report.pdf (p. 4)'."""
-        loc = f"p.{self.page}" if self.page is not None else "image"
+        loc = f"p. {self.page}" if self.page is not None else "image"
         return f"{self.source} ({loc})"
 
     def to_dict(self):

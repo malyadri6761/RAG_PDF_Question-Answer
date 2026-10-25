@@ -1,6 +1,6 @@
 import logging
 
-import fitz  # PyMuPDF
+import pymupdf
 
 from .image_loader import image_to_segments, ocr_image
 from .models import Segment
@@ -13,7 +13,7 @@ MAX_IMAGES_PER_PAGE = 10
 
 def load_pdf(pdf_bytes: bytes, source: str, doc_id: str, describer=None, min_chars: int = 40) -> list[Segment]:
     segments = []
-    with fitz.open(stream=pdf_bytes, filetype="pdf") as doc:
+    with pymupdf.open(stream=pdf_bytes, filetype="pdf") as doc:
         if doc.needs_pass:
             raise ValueError(f"{source} is password-protected")
 
